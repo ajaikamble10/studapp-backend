@@ -30,4 +30,6 @@ public class Student {
 	private String contact;
 	@Column(name="pin")
 	private String pin;
+	@Column(name="gender")
+	private String gender;
 }
