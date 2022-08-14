@@ -1,11 +1,16 @@
 package in.crudapp.springboot.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Data;
 
@@ -32,4 +37,14 @@ public class Student {
 	private String pin;
 	@Column(name="gender")
 	private String gender;
+	@Column(name="username")
+	private String username;
+	@Column(name="password")
+	private String password;
+	@Column(name="created_at")
+	@CreationTimestamp
+	private Date createdAt;
+	@Column(name="updated_at")
+	@UpdateTimestamp
+	private Date updatedAt;
 }
